@@ -1,0 +1,311 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    background-image: url('https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-light-layers-5k-5120x2880-5898.jpg');
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:40px 40px;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.123);
+    max-width: 900px;
+    margin-top: 150px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+input[type="text"] {
+    background-color: rgb(31, 31, 31);
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="text"]:focus {
+    color: #ffffff;
+    border: 1px solid #4a4a4a
+}
+
+.search_button {
+    transform: scale(0.9);
+    transition-duration: 0.3s;
+    background-color: rgb(44, 75, 255);
+    color: white;
+    border-radius: 6px;
+    padding: 15px 25px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.search_button:hover {
+    transform: scale(1);
+    transition-duration: 0.3s;
+}
+
+.title_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 15px;
+    gap: 15px;
+}
+
+.Title {
+    font-size: 40px;
+    color: #000000;
+}
+
+.OzonIcon {
+    width: 120px;
+    height: auto;
+    margin-top: 0px;
+}
+
+.Search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.SortOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.sort_select {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 10px;
+    align-self: center;
+}
+
+.CardCount {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.card_count {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 10px;
+
+        align-self: center;
+}
+
+.Offset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.offset_input {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: calc(100% - 20px);
+    height: 40px;
+    padding: 10px;
+    align-self: center;
+}
+
+.Threads {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.threads_input {
+    background-color: rgb(31, 31, 31);
+    color: white;
+    outline: none;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: calc(100% - 20px);
+    height: 35px;
+    padding: 10px;
+    align-self: center;
+}
+
+.Button {
+    display: flex;
+    justify-content: center;
+}
+
+.label {
+    color: #000000;
+    margin-bottom: 5px;
+    font-size: 18px;
+    align-self: flex-start;
+}
+
+/* CSS для анимации загрузки */
+.loader {
+    border: 5px solid #f3f3f3; /* Цвет фона */
+    border-top: 5px solid #3498db; /* Цвет верхней части */
+    border-radius: 50%;
+    width: 60px; /* Ширина */
+    height: 60px; /* Высота */
+    animation: spin 2s linear infinite; /* Анимация вращения */
+    margin-top: 30px;
+}
+
+
+
+/* --- CARDS --- */
+
+.product-card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    overflow: hidden; /* Скрываем переполнение */
+    margin: 15px; /* Отступы между карточками */
+    max-width: 900px;
+}
+
+.card-image img {
+    width: 100%; /* Используем всю ширину карточки */
+    height: 400px; /* Автоматическая высота для сохранения пропорций */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px; /* Отступы внутри карточки */
+    font-size: 16px; /* Изменяем размер шрифта */
+}
+
+.card-title {
+    font-size: 18px; /* Размер для заголовка карточки */
+    margin: 0 0 10px; /* Отступы от заголовка */
+}
+
+.card-description {
+    margin: 0 0 10px; /* Отступы для описания */
+}
+
+.card-price, .card-discount, .card-rating, .card-seller, .card-deliver-date {
+    margin: 5px 0; /* Отступы между параграфами */
+}
+
+.card-button {
+    display: inline-block; /* Для кнопки */
+    margin-top: 10px; /* Отступ сверху */
+    background-color: #007BFF; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    padding: 10px 15px; /* Внутренние отступы кнопки */
+    text-decoration: none; /* Без подчеркивания */
+    border-radius: 5px; /* Закругленные углы кнопки */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+.card-button:hover {
+    background-color: #0056b3; /* Темный фон при наведении */
+}
+
+.cards_container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- CARDS --- */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- MEDIA QUERY --- */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px; /* Меньше отступов */
+        margin-top: 100px; /* Уменьшил отступ сверху */
+    }
+    .OzonIcon {
+        width: 60px; /* Уменьшил ширину иконки */
+    }
+    .Title {
+        font-size: 28px;  /* Уменьшил размер заголовка */
+    }
+    input[type="text"] {
+         height: 36px; /* Уменьшил высоту input */
+        font-size: 12px; /* Уменьшил размер шрифта input */
+        margin-bottom: 10px; /* Меньше отступ снизу */
+    }
+
+    .search_button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+    .label{
+    font-size: 16px;
+    margin-bottom: 3px;
+    }
+
+    .sort_select {
+        height: 36px; /* Уменьшил высоту селектов и инпутов */
+        font-size: 12px;
+    }
+    .card_count,
+    .offset_input,
+    .threads_input{
+        height: 36px; /* Уменьшил высоту селектов и инпутов */
+        font-size: 12px; /* Уменьшил размер шрифта */
+    }
+
+
+}

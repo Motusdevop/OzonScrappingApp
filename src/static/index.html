@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozon Scrapping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="title_icon">
+            <img class="OzonIcon" src="https://ir.ozone.ru/s3/cms/eb/t8d/wc400/logo-logo-ozon-blue-png.png" alt="Ozon Logo">
+            <div class="Title">Scrapping</div>
+        </div>
+        <div class="Search">
+            <input type="text" id="search_text" class="search_text" placeholder="введи поисковый запрос...">
+        </div>
+        <div class="SortOptions">
+           <label for="sort_by" class="label">Сортировка:</label>
+            <select id="sort_by" class="sort_select">
+                <option value="score" selected>score</option>
+                <option value="new">new</option>
+                <option value="price">price</option>
+                <option value="price_desc">price_desc</option>
+                <option value="discount">discount</option>
+                <option value="rating">rating</option>
+            </select>
+        </div>
+         <div class="CardCount">
+          <label for="card_count" class="label">Кол-во карточек:</label>
+           <input type="number" id="count_of_cards" class="card_count" placeholder="Кол-во карточек" value="10" min="1" max="200">
+        </div>
+        <div class="Offset">
+            <label for="offset" class="label">Оффсет:</label>
+            <input type="number" id="offset" class="offset_input" placeholder="Оффсет" value="0" min="0">
+        </div>
+        <!-- <div class="Threads">
+           <label for="threads" class="label">Кол-во потоков:</label>
+            <input type="number" id="threads" class="threads_input" placeholder="Кол-во потоков" value="1" max="10" min="1">
+        </div> -->
+        <div class="Button">
+            <div type="submit" id="search_button" class="card-button">Найти</div>
+        </div>
+    </div>
+    <!-- HTML элемент для загрузки -->
+    <div id="loading" class="loader" style="display:none;"></div>
+
+    <div id="cardsContainer" class="cards_container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
